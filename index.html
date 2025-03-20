@@ -636,3 +636,98 @@
                     </svg>
                     And Many More...
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Real Results for Safety-Critical Industries</h2>
+            <p class="section-subtitle">Our platform is transforming certification outcomes across aerospace, automotive, and other regulated industries with measurable results.</p>
+            
+            <div class="metrics-container">
+                <div class="metric-card">
+                    <div class="metric-value">70%</div>
+                    <div class="metric-label">Faster Certification</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">60%</div>
+                    <div class="metric-label">Cost Reduction</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">85%</div>
+                    <div class="metric-label">Improved Traceability</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-label">Audit Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Request Early Access</h2>
+            <p class="section-subtitle">Join our early access program to experience how Certidian can transform your certification processes.</p>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Work Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="company" class="form-label">Company</label>
+                    <input type="text" id="company" name="company" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="role" class="form-label">Job Role</label>
+                    <input type="text" id="role" name="role" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Tell us about your certification needs</label>
+                    <textarea id="message" name="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Request Demo</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Certidian. All rights reserved. The Guardian of Certification Excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // You would normally send data to a server here
+                // For the simple HTML version, we'll just show an alert
+                alert('Thank you for your interest in Certidian! We will contact you soon.');
+                form.reset();
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
