@@ -918,12 +918,34 @@
             
             // For Formspree, we want the normal form submission to happen
             // But we can show a message before it redirects
-            /*form.addEventListener('submit', function() {
-                // You could optionally add a small delay here
-                setTimeout(function() {
-                    alert('Thank you for your interest in Certidian! We will contact you soon.');
-                }, 300);
-            });*/
+            form.addEventListener('submit', function(e) {
+                // Store the form data
+                const formData = new FormData(form);
+                
+                // Submit the form data using fetch
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Thank you for your interest in Certidian! We will contact you soon.');
+                        form.reset();
+                    } else {
+                        alert('Oops! There was a problem submitting the form.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Oops! There was a problem submitting the form.');
+                });
+                
+                // Prevent the default form submission
+                e.preventDefault();
+            });
 
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
