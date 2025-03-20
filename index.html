@@ -42,12 +42,67 @@
         
         header {
             padding: 15px 0;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
+            transition: all 0.3s ease;
+            background-color: #1E3A5F; /* Dark blue background */
+        }
+        
+        header.scrolled {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        header .logo-name, 
+        header .logo-slogan {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        header.scrolled .logo-name, 
+        header.scrolled .logo-slogan {
+            color: var(--primary-color);
+        }
+        
+        header .logo-icon svg {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        
+        header.scrolled .logo-icon svg {
+            color: var(--primary-color);
+        }
+                
+        .owl-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" opacity="0.2"><path d="M100 20C57 20 30 50 30 80C30 110 57 140 100 140C143 140 170 110 170 80C170 50 143 20 100 20Z" fill="%23FFFFFF"/><path d="M60 70C67.8 70 74 77.2 74 84C74 91.8 67.8 99 60 99C52.2 99 46 91.8 46 84C46 77.2 52.2 70 60 70Z" fill="%23FFFFFF"/><path d="M140 70C147.8 70 154 77.2 154 84C154 91.8 147.8 99 140 99C132.2 99 126 91.8 126 84C126 77.2 132.2 70 140 70Z" fill="%23FFFFFF"/><path d="M84 120L100 140L116 120" stroke="%23FFFFFF" stroke-width="6" stroke-linecap="round"/><path d="M190 80C190 80 170 120 100 120C30 120 10 80 10 80" stroke="%23FFFFFF" stroke-width="6" stroke-linecap="round"/><path d="M40 150L70 170" stroke="%23FFFFFF" stroke-width="6" stroke-linecap="round"/><path d="M160 150L130 170" stroke="%23FFFFFF" stroke-width="6" stroke-linecap="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 70%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-wave {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path fill="%23F5F7FA" d="M0,0 C240,95 480,100 720,80 C960,60 1200,40 1440,80 L1440,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
         }
         
         .header-container {
@@ -423,16 +478,16 @@
                 <div class="logo-icon">
                     <!-- Owl logo SVG -->
                     <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 10C28.5 10 15 25 15 40C15 55 28.5 70 50 70C71.5 70 85 55 85 40C85 25 71.5 10 50 10Z" fill="#1E3A5F"/>
+                        <path d="M50 10C28.5 10 15 25 15 40C15 55 28.5 70 50 70C71.5 70 85 55 85 40C85 25 71.5 10 50 10Z" fill="currentColor"/>
                         <path d="M30 35C33.9 35 37 38.1 37 42C37 45.9 33.9 49 30 49C26.1 49 23 45.9 23 42C23 38.1 26.1 35 30 35Z" fill="white"/>
                         <path d="M70 35C73.9 35 77 38.1 77 42C77 45.9 73.9 49 70 49C66.1 49 63 45.9 63 42C63 38.1 66.1 35 70 35Z" fill="white"/>
                         <path d="M32 42C33.1 42 34 42.9 34 44C34 45.1 33.1 46 32 46C30.9 46 30 45.1 30 44C30 42.9 30.9 42 32 42Z" fill="#0CB4CE"/>
                         <path d="M68 42C69.1 42 70 42.9 70 44C70 45.1 69.1 46 68 46C66.9 46 66 45.1 66 44C66 42.9 66.9 42 68 42Z" fill="#0CB4CE"/>
                         <path d="M50 54C53.9 54 57 52.9 57 49C57 45.1 53.9 45 50 45C46.1 45 43 45.1 43 49C43 52.9 46.1 54 50 54Z" fill="#E5E5E5"/>
-                        <path d="M42 60L50 70L58 60" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M95 40C95 40 85 60 50 60C15 60 5 40 5 40" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M20 75L35 85" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M80 75L65 85" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M42 60L50 70L58 60" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M95 40C95 40 85 60 50 60C15 60 5 40 5 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M20 75L35 85" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M80 75L65 85" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
                     </svg>
                 </div>
                 <div class="logo-text">
@@ -445,12 +500,14 @@
     </header>
 
     <section class="hero">
+        <div class="owl-background"></div>
         <div class="container">
             <span class="launch-badge">Certification Excellence</span>
             <h1>Revolutionizing Safety-Critical Certification</h1>
             <p>Certidian transforms regulatory compliance across RTCA, FAA, EASA, ISO, and military standards into a streamlined, intelligent process. Our platform accelerates certification by up to 70% while reducing costs by 60% and improving system safety through comprehensive coverage analysis.</p>
             <a href="#contact" class="cta-button">Request Demo</a>
         </div>
+        <div class="hero-wave"></div>
     </section>
 
     <section class="section bg-white">
@@ -727,6 +784,15 @@
                     });
                 });
             });
+        });
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         });
     </script>
 </body>
