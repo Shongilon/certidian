@@ -916,13 +916,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('.contact-form');
             
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // You would normally send data to a server here
-                // For the simple HTML version, we'll just show an alert
-                alert('Thank you for your interest in Certidian! We will contact you soon.');
-                form.reset();
+            // For Formspree, we want the normal form submission to happen
+            // But we can show a message before it redirects
+            form.addEventListener('submit', function() {
+                // You could optionally add a small delay here
+                setTimeout(function() {
+                    alert('Thank you for your interest in Certidian! We will contact you soon.');
+                }, 300);
             });
 
             // Smooth scrolling for anchor links
