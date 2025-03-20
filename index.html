@@ -458,6 +458,61 @@
                 padding: 60px 0;
             }
         }
+
+        .standards-section {
+            padding: 90px 0;
+            text-align: center;
+        }
+        
+        .standards-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 40px 0;
+        }
+        
+        .standard-pill {
+            background-color: #f5f7fa;
+            border-radius: 30px;
+            padding: 8px 16px;
+            font-size: 14px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .standard-pill:hover {
+            background-color: var(--light-accent);
+            transform: translateY(-2px);
+        }
+        
+        .standard-icon {
+            color: var(--accent-color);
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .metric-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .metric-percentage {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+        
+        .metric-description {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
@@ -576,137 +631,52 @@
                     </div>
                     <p>Our intelligent documentation system creates human-quality certification documentation that meets regulatory standards, converting raw evidence into clear, structured narratives that satisfy certification authorities and DERs.</p>
                 </div>
-            </div>
-            
-            <div class="standards-container">
-                <!-- Civil Aviation -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/>
-                    </svg>
-                    DO-178C
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/>
-                    </svg>
-                    DO-254
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/>
-                    </svg>
-                    DO-278A
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/>
-                    </svg>
-                    DO-330
-                </div>
-                
-                <!-- FAA Standards -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                    FAR Part 23
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                    FAR Part 25
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                    AC 20-115D
-                </div>
-                
-                <!-- EASA Standards -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/>
-                    </svg>
-                    ED-12C
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/>
-                    </svg>
-                    ED-80
-                </div>
-                
-                <!-- Military -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                    </svg>
-                    MIL-STD-882E
-                </div>
-                
-                <!-- Automotive standards -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/>
-                    </svg>
-                    ISO 26262
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/>
-                    </svg>
-                    ASPICE 3.1
-                </div>
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99z"/>
-                    </svg>
-                    ISO/PAS 21448
-                </div>
-                
-                <!-- Medical -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/>
-                    </svg>
-                    IEC 62304
-                </div>
-                
-                <!-- And More indicator -->
-                <div class="standard-badge">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
-                    </svg>
-                    And Many More...
-                </div>
-            </div>
+            </div>                        
         </div>
     </section>
     
-    <section class="section bg-light">
+    <section class="section bg-white standards-section">
         <div class="container">
-            <h2 class="section-title">Real Results for Safety-Critical Industries</h2>
-            <p class="section-subtitle">Our platform is transforming certification outcomes across aerospace, automotive, and other regulated industries with measurable results.</p>
+            <h2 class="section-title">Comprehensive Standards Coverage</h2>
+            <p class="section-subtitle">
+                Certidian provides support for all major aerospace, automotive, and safety-critical 
+                certification standards, ensuring comprehensive coverage for your certification needs.
+            </p>
             
+            <div class="standards-pills">
+                <div class="standard-pill"><span class="standard-icon">○</span> DO-178C</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> DO-254</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> DO-278A</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> DO-330</div>
+                <div class="standard-pill"><span class="standard-icon">⊕</span> FAR Part 23</div>
+                <div class="standard-pill"><span class="standard-icon">⊕</span> FAR Part 25</div>
+                <div class="standard-pill"><span class="standard-icon">⊕</span> AC 20-115D</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> ED-12C</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> ED-80</div>
+                <div class="standard-pill"><span class="standard-icon">○</span> MIL-STD-882E</div>
+                <div class="standard-pill"><span class="standard-icon">⊙</span> ISO 26262</div>
+                <div class="standard-pill"><span class="standard-icon">⊙</span> ASPICE 3.1</div>
+                <div class="standard-pill"><span class="standard-icon">⊙</span> ISO/PAS 21448</div>
+                <div class="standard-pill"><span class="standard-icon">♡</span> IEC 62304</div>
+                <div class="standard-pill"><span class="standard-icon">...</span> And Many More...</div>
+            </div>
+    
             <div class="metrics-container">
-                <div class="metric-card">
-                    <div class="metric-value">70%</div>
-                    <div class="metric-label">Faster Certification</div>
+                <div class="metric-box">
+                    <div class="metric-percentage">70%</div>
+                    <div class="metric-description">Faster Certification</div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value">60%</div>
-                    <div class="metric-label">Cost Reduction</div>
+                <div class="metric-box">
+                    <div class="metric-percentage">60%</div>
+                    <div class="metric-description">Cost Reduction</div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value">85%</div>
-                    <div class="metric-label">Improved Traceability</div>
+                <div class="metric-box">
+                    <div class="metric-percentage">95%</div>
+                    <div class="metric-description">First-Time Approval</div>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-value">95%</div>
-                    <div class="metric-label">Audit Success Rate</div>
+                <div class="metric-box">
+                    <div class="metric-percentage">100%</div>
+                    <div class="metric-description">Complete Coverage</div>
                 </div>
             </div>
         </div>
