@@ -439,6 +439,17 @@
             border-color: var(--accent-color);
             box-shadow: 0 0 0 2px rgba(12, 180, 206, 0.2);
         }
+
+        .form-control:focus, .cta-button:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+        
+        /* Optional additional focus styles for other interactive elements */
+        .standard-pill:focus, .cta-header:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
         
         textarea.form-control {
             min-height: 120px;
