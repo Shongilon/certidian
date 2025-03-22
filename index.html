@@ -667,14 +667,26 @@
 
         /* Logo styling */
         .header-logo {
-            max-height: 48px;
+            max-height: 65px;
             width: auto;
+            transition: max-height 0.3s ease;
         }
         
         .footer-logo-img {
-            max-width: 280px;
+            max-width: 380px;
             height: auto;
+            transition: max-width 0.3s ease;
         }
+
+    @media (max-width: 1200px) {
+        .header-logo {
+            max-height: 58px;
+        }
+        
+        .footer-logo-img {
+            max-width: 340px;
+        }
+    }
         
     @media (max-width: 992px) {
         .metrics-container {
@@ -683,11 +695,11 @@
         
         /* Logo sizing for tablets */
         .header-logo {
-            max-height: 44px;
+            max-height: 50px;
         }
         
         .footer-logo-img {
-            max-width: 250px;
+            max-width: 300px;
         }
     }
     
@@ -712,19 +724,17 @@
         }
         
         .header-logo {
-            max-height: 40px;
+            max-height: 42px;
         }
         
         .footer-logo-img {
-            max-width: 220px;
+            max-width: 250px;
         }
         
-        /* Adjust header spacing with logo */
         .header-container {
-            padding: 0 15px;
+            padding: 6px 15px;
         }
         
-        /* Ensure the CTA button doesn't crowd the logo */
         .cta-header {
             padding: 8px 16px;
             font-size: 13px;
@@ -739,11 +749,11 @@
         
         /* Small mobile adjustments */
         .header-logo {
-            max-height: 36px;
+            max-height: 38px;
         }
         
         .footer-logo-img {
-            max-width: 200px;
+            max-width: 220px;
         }
         
         /* Ensure proper vertical spacing in the footer */
@@ -759,7 +769,7 @@
         
         /* Give more breathing room to navbar items */
         .header-container {
-            padding: 0 10px;
+            padding: 6px 10px;
         }
     }
     </style>
@@ -1002,7 +1012,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                <img src="/images/certidian-logo-white.png" alt="Certidian - The Guardian of Certification" class="footer-logo-img" width="280" height="auto">
+                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="footer-logo-img" width="280" height="auto">
             </div>
             
             <div class="footer-description">
