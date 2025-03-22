@@ -112,7 +112,7 @@
         
         .hero .container {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         
         /* Header container adjustments */
@@ -162,16 +162,17 @@
         }
         
         .hero {
-            padding: 120px 0 100px;
+            padding: 160px 0 100px; /* Increased from 120px to 160px top padding */
             background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
             color: white;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            overflow: visible; /* Changed from hidden to visible */
         }
         
         .hero h1 {
             font-size: 42px;
+            margin-top: 20px; /* Added top margin for better spacing */
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
