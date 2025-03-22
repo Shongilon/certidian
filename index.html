@@ -84,15 +84,6 @@
         header.scrolled .logo-slogan {
             color: var(--primary-color);
         }
-        
-        header .logo-icon svg {
-            color: white;
-            transition: color 0.3s ease;
-        }
-        
-        header.scrolled .logo-icon svg {
-            color: var(--primary-color);
-        }
                 
         .owl-background {
             position: absolute;
@@ -133,15 +124,6 @@
         .logo {
             display: flex;
             align-items: center;
-        }
-        
-        .logo-icon {
-            margin-right: 15px;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
         }
         
         .logo-name {
@@ -478,11 +460,6 @@
             margin-bottom: 25px;
         }
         
-        .footer-text {
-            margin-left: 15px;
-            text-align: left;
-        }
-        
         .footer-brand {
             font-size: 20px;
             font-weight: 700;
@@ -526,28 +503,6 @@
             font-size: 14px;
             opacity: 0.7;
             margin-top: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .section-title {
-                font-size: 28px;
-            }
-            
-            .hero {
-                padding: 140px 0 80px;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
         }
         
         .standards-pills {
@@ -709,50 +664,112 @@
         .form-status.error {
             color: #f44336;
         }
-        
-        @media (max-width: 992px) {
-            .metrics-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
 
-        @media (max-width: 768px) {
-            .standards-category {
-                min-width: 240px;
-                width: 100%;
-            }
+        /* Logo styling */
+        .header-logo {
+            max-height: 48px;
+            width: auto;
         }
         
-        @media (max-width: 576px) {
-            .metrics-container {
-                grid-template-columns: 1fr;
-            }
+        .footer-logo-img {
+            max-width: 280px;
+            height: auto;
         }
+        
+    @media (max-width: 992px) {
+        .metrics-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        /* Logo sizing for tablets */
+        .header-logo {
+            max-height: 44px;
+        }
+        
+        .footer-logo-img {
+            max-width: 250px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        /* Existing standards category styling */
+        .standards-category {
+            min-width: 240px;
+            width: 100%;
+        }
+        
+        /* Header adjustments for mobile */
+        .hero h1 {
+            font-size: 32px;
+        }
+        
+        .hero p {
+            font-size: 16px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+        }
+        
+        .header-logo {
+            max-height: 40px;
+        }
+        
+        .footer-logo-img {
+            max-width: 220px;
+        }
+        
+        /* Adjust header spacing with logo */
+        .header-container {
+            padding: 0 15px;
+        }
+        
+        /* Ensure the CTA button doesn't crowd the logo */
+        .cta-header {
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        /* Existing metrics container styling */
+        .metrics-container {
+            grid-template-columns: 1fr;
+        }
+        
+        /* Small mobile adjustments */
+        .header-logo {
+            max-height: 36px;
+        }
+        
+        .footer-logo-img {
+            max-width: 200px;
+        }
+        
+        /* Ensure proper vertical spacing in the footer */
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        /* Adjust CTA button for small screens */
+        .cta-header {
+            padding: 7px 14px;
+            font-size: 12px;
+        }
+        
+        /* Give more breathing room to navbar items */
+        .header-container {
+            padding: 0 10px;
+        }
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-container">
             <div class="logo">
-                <div class="logo-icon">
-                    <!-- Owl logo SVG -->
-                    <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 10C28.5 10 15 25 15 40C15 55 28.5 70 50 70C71.5 70 85 55 85 40C85 25 71.5 10 50 10Z" fill="currentColor"/>
-                        <path d="M30 35C33.9 35 37 38.1 37 42C37 45.9 33.9 49 30 49C26.1 49 23 45.9 23 42C23 38.1 26.1 35 30 35Z" fill="white"/>
-                        <path d="M70 35C73.9 35 77 38.1 77 42C77 45.9 73.9 49 70 49C66.1 49 63 45.9 63 42C63 38.1 66.1 35 70 35Z" fill="white"/>
-                        <path d="M32 42C33.1 42 34 42.9 34 44C34 45.1 33.1 46 32 46C30.9 46 30 45.1 30 44C30 42.9 30.9 42 32 42Z" fill="#0CB4CE"/>
-                        <path d="M68 42C69.1 42 70 42.9 70 44C70 45.1 69.1 46 68 46C66.9 46 66 45.1 66 44C66 42.9 66.9 42 68 42Z" fill="#0CB4CE"/>
-                        <path d="M50 54C53.9 54 57 52.9 57 49C57 45.1 53.9 45 50 45C46.1 45 43 45.1 43 49C43 52.9 46.1 54 50 54Z" fill="#E5E5E5"/>
-                        <path d="M42 60L50 70L58 60" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M95 40C95 40 85 60 50 60C15 60 5 40 5 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M20 75L35 85" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M80 75L65 85" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="logo-text">
-                    <span class="logo-name">CERTIDIAN</span>
-                    <span class="logo-slogan">The Guardian of Certification</span>
-                </div>
+                <!-- Replace SVG with the new logo image -->
+                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="header-logo" width="220" height="auto">
             </div>
             <a href="#contact" class="cta-header" aria-label="Request Early Access">Early Access</a>
         </div>
@@ -985,22 +1002,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                <svg width="36" height="36" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 10C28.5 10 15 25 15 40C15 55 28.5 70 50 70C71.5 70 85 55 85 40C85 25 71.5 10 50 10Z" fill="white"/>
-                    <path d="M30 35C33.9 35 37 38.1 37 42C37 45.9 33.9 49 30 49C26.1 49 23 45.9 23 42C23 38.1 26.1 35 30 35Z" fill="white"/>
-                    <path d="M70 35C73.9 35 77 38.1 77 42C77 45.9 73.9 49 70 49C66.1 49 63 45.9 63 42C63 38.1 66.1 35 70 35Z" fill="white"/>
-                    <path d="M32 42C33.1 42 34 42.9 34 44C34 45.1 33.1 46 32 46C30.9 46 30 45.1 30 44C30 42.9 30.9 42 32 42Z" fill="#0CB4CE"/>
-                    <path d="M68 42C69.1 42 70 42.9 70 44C70 45.1 69.1 46 68 46C66.9 46 66 45.1 66 44C66 42.9 66.9 42 68 42Z" fill="#0CB4CE"/>
-                    <path d="M50 54C53.9 54 57 52.9 57 49C57 45.1 53.9 45 50 45C46.1 45 43 45.1 43 49C43 52.9 46.1 54 50 54Z" fill="#E5E5E5"/>
-                    <path d="M42 60L50 70L58 60" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M95 40C95 40 85 60 50 60C15 60 5 40 5 40" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M20 75L35 85" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M80 75L65 85" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div class="footer-text">
-                    <div class="footer-brand">CERTIDIAN</div>
-                    <div class="footer-slogan">The Guardian of Certification</div>
-                </div>
+                <img src="/images/certidian-logo-white.png" alt="Certidian - The Guardian of Certification" class="footer-logo-img" width="280" height="auto">
             </div>
             
             <div class="footer-description">
