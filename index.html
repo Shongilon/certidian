@@ -115,10 +115,12 @@
             z-index: 1;
         }
         
+        /* Header container adjustments */
         .header-container {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 10px 20px;
         }
         
         .logo {
@@ -665,26 +667,34 @@
             color: #f44336;
         }
 
-        /* Logo styling */
+        /* Header logo - direct image size control */
         .header-logo {
-            max-height: 65px;
-            width: auto;
-            transition: max-height 0.3s ease;
+            width: 200px; /* Direct width control */
+            height: auto;
+            display: block;
+        }
+
+        /* Logo container and link */
+        .logo-link {
+            display: block;
+            text-decoration: none;
         }
         
+        /* Footer logo - direct image size control */
         .footer-logo-img {
-            max-width: 380px;
+            width: 300px; /* Direct width control */
             height: auto;
-            transition: max-width 0.3s ease;
+            display: block;
+            margin: 0 auto;
         }
 
     @media (max-width: 1200px) {
         .header-logo {
-            max-height: 58px;
+            width: 180px; /* Changed from max-height to direct width */
         }
         
         .footer-logo-img {
-            max-width: 340px;
+            width: 280px; /* Changed from max-width to direct width */
         }
     }
         
@@ -695,11 +705,11 @@
         
         /* Logo sizing for tablets */
         .header-logo {
-            max-height: 50px;
+            width: 160px; /* Changed from max-height to direct width */
         }
         
         .footer-logo-img {
-            max-width: 300px;
+            width: 260px; /* Changed from max-width to direct width */
         }
     }
     
@@ -724,11 +734,11 @@
         }
         
         .header-logo {
-            max-height: 42px;
+            width: 140px; /* Changed from max-height to direct width */
         }
         
         .footer-logo-img {
-            max-width: 250px;
+            width: 230px; /* Changed from max-width to direct width */
         }
         
         .header-container {
@@ -749,11 +759,11 @@
         
         /* Small mobile adjustments */
         .header-logo {
-            max-height: 38px;
+            width: 120px; /* Changed from max-height to direct width */
         }
         
         .footer-logo-img {
-            max-width: 220px;
+            width: 200px; /* Changed from max-width to direct width */
         }
         
         /* Ensure proper vertical spacing in the footer */
@@ -777,10 +787,9 @@
 <body>
     <header>
         <div class="container header-container">
-            <div class="logo">
-                <!-- Replace SVG with the new logo image -->
-                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="header-logo" width="220" height="auto">
-            </div>
+            <a href="/" class="logo-link">
+                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="header-logo">
+            </a>
             <a href="#contact" class="cta-header" aria-label="Request Early Access">Early Access</a>
         </div>
     </header>
@@ -1012,7 +1021,7 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="footer-logo-img" width="280" height="auto">
+                <img src="/images/certidian-logo-white.png" alt="Certidian - The Guardian of Certification" class="footer-logo-img">
             </div>
             
             <div class="footer-description">
