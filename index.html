@@ -101,6 +101,15 @@
         header.scrolled .logo-slogan {
             color: var(--primary-color);
         }
+
+        /* When scrolled, swap visibility */
+        header.scrolled .logo-white {
+            opacity: 0; /* Hide white version */
+        }
+        
+        header.scrolled .logo-color {
+            opacity: 1; /* Show color version */
+        }
                 
         .owl-background {
             position: absolute;
@@ -692,12 +701,26 @@
             width: 300px; /* Direct width control */
             height: auto;
             display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Logo version visibility states */
+        .logo-white {
+            opacity: 1; /* Visible by default when at top */
+        }
+        
+        .logo-color {
+            opacity: 0; /* Hidden by default when at top */
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
         /* Logo container and link */
         .logo-link {
             display: block;
             text-decoration: none;
+            position: relative;
         }
         
         /* Footer logo - direct image size control */
@@ -809,7 +832,11 @@
     <header>
         <div class="container header-container">
             <a href="/" class="logo-link">
-                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="header-logo">
+                <!-- White version for blue background (default at top) -->
+                <img src="/images/certidian-logo-white.png" alt="Certidian - The Guardian of Certification" class="header-logo logo-white">
+                
+                <!-- Blue/regular version for white background (when scrolled) -->
+                <img src="/images/certidian-logo.png" alt="Certidian - The Guardian of Certification" class="header-logo logo-color">
             </a>
             <a href="#contact" class="cta-header" aria-label="Request Early Access">Early Access</a>
         </div>
